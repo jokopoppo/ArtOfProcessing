@@ -16,7 +16,7 @@ class Guin{
   void legs(){
     pushMatrix();  
     noStroke();
-    fill(150);
+    fill(#74D0F0);
     translate(70,200);
     scale(2,1,1);
     sphere(25);
@@ -24,7 +24,7 @@ class Guin{
     
     pushMatrix();  
     noStroke();
-    fill(150);
+    fill(#74D0F0);
     translate(-70,200);
     scale(2,1,1);
     sphere(25);
@@ -77,7 +77,7 @@ class Guin{
   void arms(){
     pushMatrix();  
     noStroke();
-    fill(150);
+    fill(#74D0F0);
     translate(150,0,20);
     scale(2,1,1);
     sphere(25);
@@ -85,7 +85,7 @@ class Guin{
     
     pushMatrix();  
     noStroke();
-    fill(150);
+    fill(#74D0F0);
     translate(-150,0,20);
     scale(2,1,1);
     sphere(25);
