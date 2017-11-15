@@ -23,8 +23,9 @@ int origin_pic_y = 0;
 int i=0;
 
 void draw(){
-    background(255);
+    background(252,248,243);
     textFont(f);
+    //imageMode(CENTER);
     image(pic,origin_pic_x, origin_pic_y,size_of_pic_x,size_of_pic_y);
     
     //fill(0);
@@ -38,6 +39,11 @@ void draw(){
     rect(origin_pic_x+35,origin_pic_y+30,55,20);
     
     fill(0);
+    textSize(16);
+    textAlign(LEFT);
+    text("25"+(year+54),origin_pic_x+45,origin_pic_y+45);
+    
+    
     textSize(16);
     textAlign(LEFT);
     text("SELECT YEAR",origin_pic_x+15,origin_pic_y+30-5);
@@ -70,4 +76,5 @@ void mouseDragged(){
 void mousePressed(){
   if(origin_pic_x+35<mouseX && mouseX<origin_pic_x+35+55 && origin_pic_y+30 < mouseY && mouseY<origin_pic_y+30+20)
   year ++ ;
+  if(year>6)year=0;
 }
