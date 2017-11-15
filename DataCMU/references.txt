@@ -1,0 +1,3 @@
+https://www3.reg.cmu.ac.th/mis-reg/misreport/student_9_grad_year.php  //จำนวนของ นศ ที่จบการศึกษาแต่ละปี
+
+https://www3.reg.cmu.ac.th/mis-reg/misreport/student_9_sec.php //จำนวนสถานะภาพ นศ
