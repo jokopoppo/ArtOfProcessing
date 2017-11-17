@@ -1,18 +1,23 @@
 PImage img; 
-String[] data;
 PFont f;
 PImage pic ;
+PImage prop; 
 float e;
 
 int year = 0 ; 
 
-int size_of_pic_x ;
-int size_of_pic_y ; 
+float size_of_pic_x ;
+float size_of_pic_y ; 
 
 float origin_pic_x ;
 float origin_pic_y ;
 
 boolean mode ;
+
+int fa ; 
+
+String[] graduate;
+String [] da;
 Circle cir[] = new Circle [16];
 Line underLine[] = new Line [20]; 
 
@@ -20,8 +25,10 @@ void setup(){
   fullScreen();
   //size(1000, 500);
   f=createFont("Tahoma",30,true);
-  data = loadStrings("text.txt");
-  saveStrings("split.txt",data);
+  
+  graduate = loadStrings("graduate.txt");
+  //saveStrings("split.txt",data);
+  
   pic = loadImage("2.gif");
   newCir();
   newLine();
@@ -32,13 +39,15 @@ void setup(){
   origin_pic_x = 0 ;
   origin_pic_y = 0 ;
   mode =true ;
-  frameRate(120);
+  
+  smooth();
+  frameRate(60);
 }
 
 void draw(){
     background(252,248,243);
     textFont(f);
-    //imageMode(CENTER);
+    imageMode(CORNER);
     image(pic,origin_pic_x, origin_pic_y,size_of_pic_x,size_of_pic_y);
     
     //fill(0);
@@ -67,25 +76,21 @@ void draw(){
        showLine();
        popUp();
     }
+    
+    popImg();
     println(width,height,origin_pic_x,origin_pic_y);
     
     if(mouseY==0)text(mouseX +" "+ mouseY ,mouseX+20,mouseY+20 );
     if(mouseX>=displayWidth-100)text(mouseX +" "+ mouseY ,mouseX-100,mouseY);
     else text(mouseX +" "+ mouseY ,mouseX,mouseY);
-    //size_of_pic_x=constrain(size_of_pic_x,width,pic.width);
-    //size_of_pic_y=constrain(size_of_pic_y,height,pic.height);
+    size_of_pic_x=constrain(size_of_pic_x,width,pic.width);
+    size_of_pic_y=constrain(size_of_pic_y,height,pic.height);
     //origin_pic_x=constrain(origin_pic_x,-width,0);
     //origin_pic_y=constrain(origin_pic_y,-height,0);
+    fill(100,100);
+    //ellipse(width/2,2*height/3,50,50);
 }
 
-void mouseWheel(MouseEvent event) {
-  e = event.getCount();
-  
-  println(e);
-  size_of_pic_x +=e*10;
-  size_of_pic_y +=e*10; 
-  
-}
 
 void newLine (){
   underLine[0] = new Line (width/3.34,height/5.8,width/2.33);
@@ -255,6 +260,24 @@ void newCir (){
   cir[14] = new Circle (width/1.340529931305201,height/1.08936170212766);
   //49
   cir[15] = new Circle (width/1.299714557564225,height/1.074125874125874);
+  
+}
+
+void popImg(){
+  
+  if(!mode) {
+    noStroke();
+    fill(100,150);
+    triangle(2*width/3, 2.5*height/4,2*width/3-width/25,height/4,2*width/3+width/25,height/4);
+    
+  }
+  imageMode(CENTER);
+  switch(fa){
+    case 6 : 
+      prop=loadImage("6.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+  }
   
   
 }
