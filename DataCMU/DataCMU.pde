@@ -14,10 +14,10 @@ float origin_pic_y ;
 
 boolean mode ;
 
-int fa ; 
+String fa ="0" ; 
 
 String[] graduate;
-String [] da;
+String [] stay;
 Circle cir[] = new Circle [16];
 Line underLine[] = new Line [20]; 
 
@@ -26,7 +26,7 @@ void setup(){
   //size(1000, 500);
   f=createFont("Tahoma",30,true);
   
-  graduate = loadStrings("graduate.txt");
+  graduate = loadStrings("graduate59.txt");
   //saveStrings("split.txt",data);
   
   pic = loadImage("2.gif");
@@ -55,6 +55,7 @@ void draw(){
     //text(data[i]+"\n",0,height/2);
     //i++;
     //if(i==data.length)i=0;
+    rectMode(CORNER);
     stroke(0); 
     strokeWeight(3);
     fill(255);
@@ -269,15 +270,91 @@ void popImg(){
     noStroke();
     fill(100,150);
     triangle(2*width/3, 2.5*height/4,2*width/3-width/25,height/4,2*width/3+width/25,height/4);
-    
+    rectMode(CENTER);
+    strokeWeight(10);
+    stroke(150,150);
+    rect(2*width/3, 1.5*height/6,width/3+3,height/3+3);
   }
   imageMode(CENTER);
   switch(fa){
-    case 6 : 
+    case "6" : 
       prop=loadImage("6.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
       break;
+    case "10" : 
+      prop=loadImage("10.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+    case "10.1" : 
+      prop=loadImage("10.1.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+    case "11" : 
+      prop=loadImage("11.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+    case "11.1" : 
+      prop=loadImage("11.1.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+    case "12" : 
+      prop=loadImage("12.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+    case "19" : 
+      prop=loadImage("19.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+    case "25" : 
+      prop=loadImage("25.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+    case "26" : 
+      prop=loadImage("26.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+    case "28" : 
+      prop=loadImage("28.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+    case "29" : 
+      prop=loadImage("29.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+    case "30" : 
+      prop=loadImage("30.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+    case "33" : 
+      prop=loadImage("33.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+    case "42" : 
+      prop=loadImage("42.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+    case "43" : 
+      prop=loadImage("43.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+    case "45" : 
+      prop=loadImage("45.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+    case "48" : 
+      prop=loadImage("48.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+    case "49" : 
+      prop=loadImage("49.jpg");
+      image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      break;
+      
   }
   
+  
+}
+
+void printText() {
   
 }

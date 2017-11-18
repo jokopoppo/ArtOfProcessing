@@ -13,7 +13,7 @@ void mousePressed(){
   
   if(width/1.0928<mouseX && mouseX<width/1.0928+width/13.66 && height/1.08169014084507 < mouseY && mouseY<height/1.08169014084507+height/15.36){
     mode = true ;
-    fa=0;
+    fa="0";
     origin_pic_x = 0;
     origin_pic_y = 0;
     size_of_pic_x=width;
@@ -23,7 +23,7 @@ void mousePressed(){
   //01
   if(block(width/3.36842105,height/6.67,width/2.40601504,height/5.14285714)){
     mode = false ;
-    fa=6;
+    fa="6";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
     origin_pic_x -= pic.width/4.041420118343195;
@@ -34,7 +34,7 @@ void mousePressed(){
  //2
  if(block(width/2.23776223776,height/9.47368421053,width/1.82857142857,height/8.18181818182)){
    mode = false ;
-   fa=10;
+   fa="10";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
     origin_pic_x -= pic.width/6.4739336492891;
@@ -45,7 +45,7 @@ void mousePressed(){
  //3
  if(block(width/2.237762237762238,height/7.826086956521739,width/1.702127659574468,height/6.923076923076923)){
     mode = false ;
-    fa=10;
+    fa="10.1";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
     origin_pic_x -= pic.width/6.4739336492891;
@@ -57,7 +57,7 @@ void mousePressed(){
  //4
  if(block(width/2.237762237762238,height/6.428571428571429,width/1.767955801104972,height/5.806451612903226)){
    mode = false ;
-   fa=11;
+   fa="11";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
     origin_pic_x -= pic.width/7.805714285714286;
@@ -68,7 +68,7 @@ void mousePressed(){
  //56
  if(block(width/2.237762237762238,height/5.625,width/1.758241758241758,height/4.736842105263158)){
     mode = false ;
-    fa=11;
+    fa="11.1";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
     origin_pic_x -= pic.width/7.805714285714286;
@@ -79,7 +79,7 @@ void mousePressed(){
  //7
  if(block(width/2.237762237762238,height/4.5,width/1.828571428571429,height/4.186046511627907)){
     mode = false ;
-    fa=12;
+    fa="12";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
     origin_pic_x -= pic.width/8.130952380952381;
@@ -91,7 +91,7 @@ void mousePressed(){
  //8
  if(block(underLine[8].x1,height/10.97142857142857,underLine[8].x2,underLine[8].y)){
     mode = false ;
-    fa=19;
+    fa="19";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
     origin_pic_x -= pic.width/4.309148264984227;
@@ -102,7 +102,7 @@ void mousePressed(){
  //9
  if(block(underLine[9].x1,height/3.572093023255814,underLine[9].x2,underLine[9].y)){
     mode = false ;
-    fa=25;
+    fa="25";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
     origin_pic_x -= pic.width/8.986842105263158;
@@ -113,7 +113,7 @@ void mousePressed(){
  //10
  if(block(underLine[10].x1,height/3.268085106382979,underLine[10].x2,underLine[10].y)){
    mode = false ;
-   fa=26;
+   fa="26";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
     origin_pic_x -= pic.width/5.691666666666667;
@@ -124,7 +124,7 @@ void mousePressed(){
  //11
  if(block(underLine[11].x1,height/2.792727272727273,underLine[11].x2,underLine[11].y)){
     mode = false ;
-    fa=28;
+    fa="28";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
     origin_pic_x -= pic.width/3.78393351800554;
@@ -135,7 +135,7 @@ void mousePressed(){
  //12
  if(block(underLine[12].x1,height/2.648275862068966,underLine[12].x2,underLine[12].y)){
     mode = false ;
-    fa=29;
+    fa="29";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
      origin_pic_x -= pic.width/3.415;
@@ -146,7 +146,7 @@ void mousePressed(){
  //13
  if(block(underLine[13].x1,height/2.47741935483871,underLine[13].x2,underLine[13].y)){
     mode = false ;
-    fa=30;
+    fa="30";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
     origin_pic_x -= pic.width/3.05592841163311;
@@ -157,7 +157,7 @@ void mousePressed(){
  //14
  if(block(underLine[14].x1,height/9.6,underLine[14].x2,underLine[14].y)){
     mode = false ;
-    fa=33;
+    fa="33";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
     origin_pic_x -= pic.width/2.804928131416838;
@@ -168,7 +168,7 @@ void mousePressed(){
  //15
  if(block(underLine[15].x1,height/3.072,underLine[15].x2,underLine[15].y)){
     mode = false ;
-    fa=42;
+    fa="42";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
     origin_pic_x -= pic.width/1.878954607977992;
@@ -179,7 +179,7 @@ void mousePressed(){
  //16
  if(block(underLine[16].x1,height/2.89811320754717,underLine[16].x2,underLine[16].y)){
     mode = false ;
-    fa=43;
+    fa="43";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
     origin_pic_x -= pic.width/1.769430051813472;
@@ -190,7 +190,7 @@ void mousePressed(){
  //17
  if(block(underLine[17].x1,height/2.56,underLine[17].x2,underLine[17].y)){
    mode = false ;
-   fa=45;
+   fa="45";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
     origin_pic_x -= (pic.width/1.427377220480669);
@@ -201,7 +201,7 @@ void mousePressed(){
  //18
  if(block(underLine[18].x1,height/1.944303797468354,underLine[18].x2,underLine[18].y)){
     mode = false ;
-    fa=48;
+    fa="48";
     size_of_pic_x=pic.width;
     size_of_pic_y=pic.height;
     origin_pic_x -= ((pic.width/1.340529931305201));
@@ -212,7 +212,7 @@ void mousePressed(){
  //19
   if(block(underLine[19].x1,height/1.850602409638554,underLine[19].x2,underLine[19].y)){
    mode = false ;
-   fa=49;
+   fa="49";
    size_of_pic_x=pic.width;
    size_of_pic_y=pic.height;
    origin_pic_x -= ((pic.width/1.299714557564225));
