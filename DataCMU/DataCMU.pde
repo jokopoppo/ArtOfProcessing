@@ -16,17 +16,34 @@ boolean mode ;
 
 String fa ="0" ; 
 
-String[] graduate;
-String [] stay;
-Circle cir[] = new Circle [16];
-Line underLine[] = new Line [20]; 
+String[] graduate59;
+String[] graduate58;
+String[] graduate57;
+String[] graduate56;
+String[] graduate55;
 
+String [] stay59;
+String [] stay58;
+String [] stay57;
+String [] stay56;
+String [] stay55;
+
+Circle cir[] = new Circle [16];
+Line underLine[] = new Line [20];
+
+Point point59[] = new Point [18] ; 
+Point point58[] = new Point [18] ; 
+Point point57[] = new Point [18] ; 
+Point point56[] = new Point [18] ; 
+Point point55[] = new Point [18] ; 
+
+int time =0 ; 
 void setup(){
   fullScreen();
   //size(1000, 500);
   f=createFont("Tahoma",30,true);
   
-  graduate = loadStrings("graduate59.txt");
+  loadText();
   //saveStrings("split.txt",data);
   
   pic = loadImage("2.gif");
@@ -40,6 +57,7 @@ void setup(){
   origin_pic_y = 0 ;
   mode =true ;
   
+  newPoint();
   smooth();
   frameRate(60);
 }
@@ -65,7 +83,7 @@ void draw(){
     fill(0);
     textSize(16);
     textAlign(LEFT);
-    text("25"+(year+53),width/30.35555555555556,height/16.69565217391304);
+    text("25"+(year+54),width/30.35555555555556,height/16.69565217391304);
     
     
     textSize(16);
@@ -79,7 +97,7 @@ void draw(){
     }
     
     popImg();
-    println(width,height,origin_pic_x,origin_pic_y);
+    //println(width,height,origin_pic_x,origin_pic_y);
     
     if(mouseY==0)text(mouseX +" "+ mouseY ,mouseX+20,mouseY+20 );
     if(mouseX>=displayWidth-100)text(mouseX +" "+ mouseY ,mouseX-100,mouseY);
@@ -90,6 +108,8 @@ void draw(){
     //origin_pic_y=constrain(origin_pic_y,-height,0);
     fill(100,100);
     //ellipse(width/2,2*height/3,50,50);
+    time++;
+    if(time > 120) time =0;
 }
 
 
@@ -355,6 +375,55 @@ void popImg(){
   
 }
 
-void printText() {
+void newPoint(){
+  
+  for(int i=0;i<graduate59.length;i++){
+    String grade[] = splitTokens(graduate59[i],"\t");
+    String stay[]= splitTokens(stay59[i],"\t");
+    println(grade.length);
+    point59[i] = new Point(Integer.parseInt(grade[2]),Integer.parseInt(stay[2]),grade[0]);
+  }
+  
+  for(int i=0;i<graduate58.length;i++){
+    String grade[] = splitTokens(graduate58[i],"\t");
+    String stay[]= splitTokens(stay58[i],"\t");
+    point58[i] = new Point(Integer.parseInt(grade[2]),Integer.parseInt(stay[2]),grade[0]);
+  }
+  
+  for(int i=0;i<graduate57.length;i++){
+    String grade[] = splitTokens(graduate57[i],"\t");
+    String stay[]= splitTokens(stay57[i],"\t");
+    point57[i] = new Point(Integer.parseInt(grade[2]),Integer.parseInt(stay[2]),grade[0]);
+  }
+  
+  for(int i=0;i<graduate56.length;i++){
+    String grade[] = splitTokens(graduate56[i],"\t");
+    String stay[]= splitTokens(stay56[i],"\t");
+    point56[i] = new Point(Integer.parseInt(grade[2]),Integer.parseInt(stay[2]),grade[0]);
+  }
+  
+  for(int i=0;i<graduate59.length;i++){
+    String grade[] = splitTokens(graduate55[i],"\t");
+    String stay[]= splitTokens(stay55[i],"\t");
+    point55[i] = new Point(Integer.parseInt(grade[2]),Integer.parseInt(stay[2]),grade[0]);
+  }
+}
+
+void loadText(){
+  graduate59 = loadStrings("graduate59.txt");
+  stay59 = loadStrings("stay59.txt");
+  
+  graduate58 = loadStrings("graduate58.txt");
+  stay58 = loadStrings("stay58.txt");
+  
+  graduate57 = loadStrings("graduate57.txt");
+  stay57 = loadStrings("stay57.txt");
+  
+  graduate56 = loadStrings("graduate56.txt");
+  stay56 = loadStrings("stay56.txt");
+  
+  graduate55 = loadStrings("graduate55.txt");
+  stay55 = loadStrings("stay55.txt");
+  
   
 }

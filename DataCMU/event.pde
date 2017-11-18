@@ -9,7 +9,7 @@
 void mousePressed(){
   if(width/39.02857142857143<mouseX && mouseX<width/39.02857142857143+width/24.83636363636364 && height/25.6 < mouseY && mouseY<height/25.6+height/38.4)
   year ++ ;
-  if(year>6)year=0;
+  if(year>5)year=0;
   
   if(width/1.0928<mouseX && mouseX<width/1.0928+width/13.66 && height/1.08169014084507 < mouseY && mouseY<height/1.08169014084507+height/15.36){
     mode = true ;
