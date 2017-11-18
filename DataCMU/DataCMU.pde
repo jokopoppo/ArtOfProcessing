@@ -1,9 +1,10 @@
 PImage img; 
+
 PFont f;
 PImage pic ;
 PImage prop; 
 float e;
-
+String s[];
 int year = 0 ; 
 
 float size_of_pic_x ;
@@ -42,7 +43,7 @@ void setup(){
   fullScreen();
   //size(1000, 500);
   f=createFont("Tahoma",30,true);
-  
+  s = loadStrings("text.txt");
   loadText();
   //saveStrings("split.txt",data);
   
@@ -59,10 +60,11 @@ void setup(){
   
   newPoint();
   smooth();
-  frameRate(60);
+  frameRate(120);
 }
 
 void draw(){
+  
     background(252,248,243);
     textFont(f);
     imageMode(CORNER);
@@ -83,7 +85,7 @@ void draw(){
     fill(0);
     textSize(16);
     textAlign(LEFT);
-    text("25"+(year+54),width/30.35555555555556,height/16.69565217391304);
+    text("25"+(year+55),width/30.35555555555556,height/16.69565217391304);
     
     
     textSize(16);
@@ -94,9 +96,11 @@ void draw(){
     if(mode){
        showLine();
        popUp();
+       
     }
-    
+    popPop();
     popImg();
+   
     //println(width,height,origin_pic_x,origin_pic_y);
     
     if(mouseY==0)text(mouseX +" "+ mouseY ,mouseX+20,mouseY+20 );
@@ -109,7 +113,8 @@ void draw(){
     fill(100,100);
     //ellipse(width/2,2*height/3,50,50);
     time++;
-    if(time > 120) time =0;
+    if(time > 10) time=0;
+    if(fa=="0") n=1;
 }
 
 
@@ -300,76 +305,94 @@ void popImg(){
     case "6" : 
       prop=loadImage("6.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(0);
       break;
     case "10" : 
       prop=loadImage("10.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(1);
       break;
     case "10.1" : 
       prop=loadImage("10.1.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(2);
       break;
     case "11" : 
       prop=loadImage("11.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(3);
       break;
     case "11.1" : 
       prop=loadImage("11.1.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(4);
       break;
     case "12" : 
       prop=loadImage("12.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(5);
       break;
     case "19" : 
       prop=loadImage("19.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(6);
       break;
     case "25" : 
       prop=loadImage("25.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(7);
       break;
     case "26" : 
       prop=loadImage("26.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(8);
       break;
     case "28" : 
       prop=loadImage("28.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(9);
       break;
     case "29" : 
       prop=loadImage("29.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(10);
       break;
     case "30" : 
       prop=loadImage("30.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(11);
       break;
     case "33" : 
       prop=loadImage("33.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(12);
       break;
     case "42" : 
       prop=loadImage("42.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(13);
       break;
     case "43" : 
       prop=loadImage("43.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(14);
       break;
     case "45" : 
       prop=loadImage("45.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(15);
       break;
     case "48" : 
       prop=loadImage("48.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(16);
       break;
     case "49" : 
       prop=loadImage("49.jpg");
       image(prop,2*width/3, 1.5*height/6,width/3,height/3);
+      printText(17);
       break;
-      
+    
   }
   
   
@@ -380,7 +403,6 @@ void newPoint(){
   for(int i=0;i<graduate59.length;i++){
     String grade[] = splitTokens(graduate59[i],"\t");
     String stay[]= splitTokens(stay59[i],"\t");
-    println(grade.length);
     point59[i] = new Point(Integer.parseInt(grade[2]),Integer.parseInt(stay[2]),grade[0]);
   }
   
@@ -406,6 +428,7 @@ void newPoint(){
     String grade[] = splitTokens(graduate55[i],"\t");
     String stay[]= splitTokens(stay55[i],"\t");
     point55[i] = new Point(Integer.parseInt(grade[2]),Integer.parseInt(stay[2]),grade[0]);
+    
   }
 }
 

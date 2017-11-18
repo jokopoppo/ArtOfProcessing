@@ -1,1 +1,18 @@
-﻿
+﻿Faculty of Political Science and Administration
+Faculty of Humanities
+Faculty of Masscommunication
+Faculty of Social Sceience
+Faculty of Political Science and Public Administation
+Faculty of Economics
+Faculty of Science
+Faculty of Architecture
+Faculty of Engineering
+Faculty of Education
+Faculty of Business Administration
+Faculty of Fine Arts
+Faculty of Agriculture
+Faculty of Pharmacy
+Faculty of Dentistry
+Faculty of Medicine
+Faculty of Associated Medical Sciences
+Faculty of Nursing
