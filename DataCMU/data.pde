@@ -46,6 +46,7 @@ void popPop (){
         break;
       case "29" : 
         point55[10].popPointS();
+        break;
       case "30" : 
         point55[11].popPointS();
         break;

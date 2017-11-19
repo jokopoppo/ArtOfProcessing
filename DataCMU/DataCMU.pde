@@ -39,6 +39,8 @@ Point point56[] = new Point [18] ;
 Point point55[] = new Point [18] ; 
 
 int time =0 ; 
+int sa=0 ;
+int ga=0 ; 
 void setup(){
   fullScreen();
   //size(1000, 500);
@@ -113,8 +115,11 @@ void draw(){
     fill(100,100);
     //ellipse(width/2,2*height/3,50,50);
     time++;
-    if(time > 10) time=0;
-    if(fa=="0") n=1;
+    if(time > 3) time=0;
+    if(fa=="0"){
+      n=1;
+      sa=ga=0;
+    }
 }
 
 
