@@ -5,6 +5,7 @@ PImage pic ;
 PImage prop; 
 float e;
 String s[];
+int t[] = new int[18] ; 
 int year = 0 ; 
 
 float size_of_pic_x ;
@@ -46,6 +47,7 @@ void setup(){
   //size(1000, 500);
   f=createFont("Tahoma",30,true);
   s = loadStrings("text.txt");
+  newT();
   loadText();
   //saveStrings("split.txt",data);
   
@@ -119,6 +121,7 @@ void draw(){
     if(fa=="0"){
       n=1;
       sa=ga=0;
+      for(int i=0;i<s.length;i++) t[i]=s[i].length();
     }
 }
 
@@ -454,4 +457,10 @@ void loadText(){
   stay55 = loadStrings("stay55.txt");
   
   
+}
+
+void newT(){
+  for(int i=0;i<s.length;i++){
+    t[i]=s[i].length();
+  }
 }

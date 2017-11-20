@@ -7,7 +7,7 @@
 //}
 
 void mousePressed(){
-  if(width/39.02857142857143<mouseX && mouseX<width/39.02857142857143+width/24.83636363636364 && height/25.6 < mouseY && mouseY<height/25.6+height/38.4)
+  if(width/39.02857142857143<mouseX && mouseX<width/39.02857142857143+width/24.83636363636364 && height/25.6 < mouseY && mouseY<height/25.6+height/38.4 && fa=="0")
   year ++ ;
   if(year>4)year=0;
   

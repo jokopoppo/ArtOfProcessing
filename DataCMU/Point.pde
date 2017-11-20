@@ -15,7 +15,7 @@ class Point {
   }
   
   void popPointS(){
-    println(fa,sa,stay);
+    //println(fa,sa,stay);
     if(sa<=stay){
       
       if(time==0){
@@ -36,7 +36,7 @@ class Point {
         }
         
       }
-      sa+=10;
+      sa+=50;
     }
     
     if(sa>=stay && ga<=graduate){
@@ -57,11 +57,30 @@ class Point {
         }
         
       }
-      ga+=2;
+      ga+=20;
     }
   }
   
-  void popPointG(){
+  void popText(int i){
     
+    
+    if(t[i]==0) {
+      textSize(30);
+      String tmp = "Current Student this year : " + stay;
+      stroke(150);
+      fill(255,200);
+      rect(width/16-10,height/9+170,textWidth(tmp)+20,40);
+      fill(0);
+      text(tmp,width/16,height/9+200);
+    }
+    if(ga>=graduate){
+      textSize(30);
+      String tmp = "Current Graduate Student this year : " + graduate ;
+      fill(255,200);
+      rect(width/16-10,height/9+370,textWidth(tmp)+20,40);
+      fill(0);
+      text(tmp,width/16,height/9+400);
+    
+    }
   }
 }
