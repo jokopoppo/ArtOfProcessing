@@ -1,4 +1,4 @@
-PImage img; 
+ PImage img; 
 
 PFont f;
 PImage pic ;
@@ -107,9 +107,9 @@ void draw(){
    
     //println(width,height,origin_pic_x,origin_pic_y);
     
-    if(mouseY==0)text(mouseX +" "+ mouseY ,mouseX+20,mouseY+20 );
-    if(mouseX>=displayWidth-100)text(mouseX +" "+ mouseY ,mouseX-100,mouseY);
-    else text(mouseX +" "+ mouseY ,mouseX,mouseY);
+    //if(mouseY==0)text(mouseX +" "+ mouseY ,mouseX+20,mouseY+20 );
+    //if(mouseX>=displayWidth-100)text(mouseX +" "+ mouseY ,mouseX-100,mouseY);
+    //else text(mouseX +" "+ mouseY ,mouseX,mouseY);
     size_of_pic_x=constrain(size_of_pic_x,width,pic.width);
     size_of_pic_y=constrain(size_of_pic_y,height,pic.height);
     //origin_pic_x=constrain(origin_pic_x,-width,0);
