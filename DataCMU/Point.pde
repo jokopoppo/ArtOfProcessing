@@ -64,23 +64,29 @@ class Point {
   void popText(int i){
     
     
-    if(t[i]==0) {
+    //if(t[i]==0) 
+    {
       textSize(30);
-      String tmp = "Current Student this year : " + stay;
+      String tmp;
+      if(sa>=stay) tmp = "Current Student this year : " + stay;
+      else tmp = "Current Student this year : " + sa;
       stroke(150);
       fill(255,200);
       rect(width/16-10,height/9+170,textWidth(tmp)+20,40);
       fill(0);
       text(tmp,width/16,height/9+200);
     }
-    if(ga>=graduate){
+    //if(ga>=graduate)
+    {
       textSize(30);
-      String tmp = "Current Graduate Student this year : " + graduate ;
+      String tmp;
+      if(ga>=graduate) tmp = "Current Graduate Student this year : " + graduate ;
+      else tmp = "Current Graduate Student this year : " + ga ;
       fill(255,200);
       rect(width/16-10,height/9+370,textWidth(tmp)+20,40);
       fill(0);
       text(tmp,width/16,height/9+400);
-    
+      
     }
   }
 }
